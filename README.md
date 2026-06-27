@@ -184,7 +184,7 @@ if id_token:
 ```
 
 ### Base Agent
-* Not all agents use LLMs - sometimes it's just simpley logic
+* Not all agents use LLMs - sometimes it's just simple logic
 * `BaseAgent` defines an agent that just runs code
 * It's used here as an escalation check - if the Judge says "Pass" we want to immediately exit the loop and move to the Content Builder
 * So this `BaseAgent` checks the session state and uses `EventActions(escalate=True)` to signal the `LoopAgent` to stop
